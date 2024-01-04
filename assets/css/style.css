@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,60 +9,169 @@
 body {
   margin: 0 auto;
   width: 100%;
-  background-color: #a5a3a0;
+  background-color: #222;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-header {
-  width: 300px;
-  height: 50px;
-  margin-top: 20px;
-  font-family: "Bruno Ace SC";
+.container {
   text-align: center;
-  border-bottom: 1px solid black;
+  padding: 20px;
 }
 
-.toDoForm {
-  height: 80px;
-  width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.form {
+  margin-bottom: 40px;
+  height: 40px;
+}
+
+.form__input {
+  padding: 10px;
+  margin-right: 5px;
+  height: 45px;
+  width: 82%;
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 15px;
+}
+.form__input::-moz-placeholder {
+  text-align: center;
+  font-size: 16px;
+}
+.form__input::placeholder {
+  text-align: center;
+  font-size: 16px;
+}
+
+.form__button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  font-size: 20px;
+  margin-right: 10px;
+  height: 50px;
+}
+
+.form__button:hover {
+  letter-spacing: 3px;
+  background-color: green;
+  color: hsl(0, 0%, 100%);
+}
+
+.filters {
+  margin-bottom: 40px;
+}
+
+.filters__button {
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #333;
+  color: #eee;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 19px;
   margin-right: 10px;
 }
 
-.taskInput {
-  width: 230px;
-  height: 40px;
-  border-radius: 25px;
-  border: none;
-  padding-left: 15px;
-}
-.taskInput::-moz-placeholder {
-  text-align: center;
-  font-size: 16px;
-}
-.taskInput::placeholder {
-  text-align: center;
-  font-size: 16px;
+.filters__button:hover {
+  background-color: #666;
+  color: #fff;
 }
 
-.submitBtn {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  margin: 0 10px 0 10px;
-  width: 40px;
-  height: 40px;
+.show-all-button {
+  padding: 8px 15px;
+  letter-spacing: 1px;
+  background-color: #333;
+  color: #fff;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-right: 10px;
+  font-size: 19px;
 }
-.submitBtn .addPlus {
-  margin-top: 6px;
-  font-size: 30px;
+
+.show-all-button:hover {
+  background-color: #666;
 }
-.submitBtn:hover {
-  color: rgb(15, 156, 15);
+
+.delete-all-button {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-right: 10px;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.delete-all-button:hover {
+  background-color: #8a000a;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: #444;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.task-list__item {
+  margin: 5px 0;
+}
+
+.task-list__item.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.material-symbols-outlined {
+  background: none;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 36px;
+  }
+  .form__button {
+    font-size: 18px;
+  }
+  /* Adjust other styles for smaller screens */
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

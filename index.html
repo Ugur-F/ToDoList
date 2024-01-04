@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>To-Do List</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>To Do List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <header>
-        <h1>To Do List</h1>
+        <h1 class="title">To-Do List</h1>
     </header>
 
-    <form class="toDoForm">
-        <input type="text" class="taskInput" placeholder="Add a task">
-        <button type="submit" class="submitBtn">
-            <i class="addPlus"></i>
-        </button>       
-    </form>
+    <div class="container">
 
+        <!-- TASK -->
+        <form class="form" onsubmit="addTask(); return false;">
+            <input type="text" id="taskInput" class="form__input" placeholder="Add a task">
+            <button type="submit" class="form__button">
+                <span class="material-symbols-outlined">
+                    arrow_downward
+                </span>
+            </button>
+        </form>
 
+        <!-- FILTRE -->
+        <div class="filters">
+            <button class="show-all-button" onclick="showAllTasks()">All</button>
+            <button class="filters__button" onclick="filterTasks(true)">Completed</button>
+            <button class="filters__button" onclick="filterTasks(false)">Not Completed</button>
+            <button class="delete-all-button" onclick="deleteAllTasks()">Delete All Tasks</button>
+        </div>
+
+        <!-- LIST -->
+        <ul id="taskList" class="task-list"></ul>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

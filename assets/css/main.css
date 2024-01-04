@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #886F68;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 370px) {
+  body {
+    width: auto;
+  }
+}
+@media screen and (min-width: 990px) {
+  body {
+    width: auto;
+    margin-top: 20px;
+  }
+}
+body header {
+  width: 300px;
+  height: 50px;
+  margin-top: 20px;
+  font-family: "Bruno Ace SC";
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+@media screen and (min-width: 990px) {
+  body header {
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+body .toDoForm {
+  height: 80px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+@media screen and (min-width: 990px) {
+  body .toDoForm {
+    width: 600px;
+    height: 120px;
+    align-self: center;
+    justify-content: space-around;
+  }
+}
+body .toDoList li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 6px;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+body .taskInput {
+  width: 230px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  padding-left: 15px;
+}
+body .taskInput::-moz-placeholder {
+  text-align: center;
+  font-size: 16px;
+}
+body .taskInput::placeholder {
+  text-align: center;
+  font-size: 16px;
+}
+@media screen and (min-width: 990px) {
+  body .taskInput {
+    width: 280px;
+  }
+}
+body .selection {
+  text-align: center;
+}
+body .selection .toDoSelection {
+  height: 30px;
+  width: 100px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+@media screen and (min-width: 990px) {
+  body .selection .toDoSelection {
+    width: 130px;
+  }
+}
+body .submitBtn {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+}
+body .submitBtn .fa-circle-plus {
+  margin-top: 6px;
+  font-size: 30px;
+}
+body .submitBtn:hover {
+  color: rgb(15, 156, 15);
+}
+body .listContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border-radius: 8px;
+  width: 350px;
+  height: auto;
+}
+body .listContainer li {
+  height: 30px;
+  list-style-type: none;
+  background-color: beige;
+  padding-top: 5px;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+body .listContainer li span {
+  padding-bottom: 5px;
+}
+body .listContainer button {
+  background-color: beige;
+  padding: 2px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+body .listContainer button:hover {
+  color: red;
+}/*# sourceMappingURL=main.css.map */
